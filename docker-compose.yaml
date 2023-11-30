@@ -8,6 +8,13 @@ services:
     networks:
       redisnet:
         ipv4_address: 192.168.10.61
+    depends_on:
+      - redis1
+      - redis2
+      - redis3
+      - redis4
+      - redis5
+      - redis6
   redis1:
     container_name: redis1
     image: redis
